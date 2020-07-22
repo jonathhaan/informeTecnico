@@ -1,0 +1,194 @@
+/* stylelint-disable selector-max-class, selector-max-combinators, selector-max-compound-selectors, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix */
+
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+
+
+#pdf p{font-size: 12px;
+
+}
+#pdf .list-group {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#pdf .list-group-item:first-child {
+  border-top-left-radius: 0px; 
+ border-top-right-radius: 0px; 
+ border-bottom-right-radius: 0px;
+ border-bottom-left-radius: 0px;
+}
+
+#pdf .container {
+width: 790px;
+max-width: none !important;
+
+}
+#pdf .mb-4 {
+  margin-bottom: 1.5rem!important;
+}
+#pdf .mb-2 {
+margin-bottom: .5rem!important;
+}
+#pdf .mb-1 {
+margin-bottom: .25rem!important;
+}
+
+#pdf .parrafo_12{
+  font-size: 12px;
+}
+
+#pdf p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#pdf .col-form-label {
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 12px;
+}
+#pdf .form-group {
+  margin-bottom: 0px;
+}
+#pdf .border_bottom_separate{
+border-bottom: 1px solid #ccc;
+}
+#pdf label {
+  display: inline-block;
+margin-bottom: 0px;
+font-weight: 700;
+}
+
+#pdf .fw-400{
+font-weight: 400;
+}
+
+#pdf .card-header-estado {
+padding: 0;
+margin-bottom: 0;
+background-color: rgba(0, 0, 0, .03);
+border-bottom: 1px solid rgba(0, 0, 0, .125);
+background-color: green;
+color: #fff;
+font-size: 12px;
+}
+
+#pdf .list-group-item {
+position: relative;
+  display: block;
+  padding: 1px 0.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ccc !important;
+}
+
+#pdf .panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: inherit;
+}
+/*Table*/
+
+#pdf .panel-table #pdf.panel-body {
+padding: 0;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered {
+border-style: none;
+margin: 0;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>thead>tr>th:first-of-type {
+text-align: center;
+width: 70px;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>thead>tr>th:last-of-type,
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>tbody>tr>td:last-of-type {
+border-right: 0px;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>thead>tr>th:first-of-type,
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>tbody>tr>td:first-of-type {
+border-left: 0px;
+}
+
+#pdf .panel-table
+#pdf .panel-body 
+#pdf .table-bordered>tbody>tr:first-of-type>td {
+border-bottom: 0px;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>thead>tr:first-of-type>th {
+border-top: 0px;
+}
+
+#pdf .panel-table 
+#pdf .panel-body 
+#pdf .table-bordered>tbody>tr>td {
+line-height: 17px;
+}
+
+#pdf .panel-table-whith {
+text-align: center;
+width: 70px;
+}
+#pdf .panel-heading {
+  padding: 6px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#pdf .table > thead > tr > th,
+#pdf .table > tbody > tr > th,
+#pdf .table > tbody > tr > td {
+  padding: 2px;
+  line-height: 1.428571429;  
+  border-top: 1px solid #dddddd;
+  font-size: 12px;
+  vertical-align: middle;
+}
+#pdf .panel {
+  margin-bottom: -2px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+#pdf .panel-default {
+  border-color: #dddddd;
+}
+#pdf .table {
+  width: 100%;
+  margin-bottom: 0px;
+}
+#pdf hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+  border-top: 1px solid #333333;
+}

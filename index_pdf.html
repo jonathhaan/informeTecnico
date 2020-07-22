@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <title>Medex - Informe Técnico</title>
+      <!-- Bootstrap CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.V3.css" rel="stylesheet">
+      <!-- Custom styles-->
+      <link href="css/style-non-responsive.css" rel="stylesheet">
+   </head>
+   <body >
+      <div class="form-group mb-4 btn-download">
+         <button>Obtener PDF</button>
+      </div>
+      <div id="pdf">
+         <!-- HEAD -->
+         <div class="container">
+            <div class="row d-flex align-items-center">
+               <div class="col-xs-4 text-center ">
+                  <img src="img/logo.jpg" width="125px">
+               </div>
+               <div class="col-xs-4 text-center mb-4">
+                  <h4>INFORME TECNICO</h4>
+                  <h2>Nº 12345-6789</h2>
+               </div>
+               <div class="col-xs-4">
+                  <div class="card text-center">
+                     <div class="card-header-estado">Estado</div>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-left">
+                           <ul class="nav nav-pills nav-stacked">
+                              <li class="active">
+                                 <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                 Aceptado
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-left">
+                           <ul class="nav nav-pills nav-stacked">
+                              <li class="active">
+                                 <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                 Requiere Servicio
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-left">
+                           <ul class="nav nav-pills nav-stacked">
+                              <li class="active">
+                                 <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                 Dado de Baja
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-left">
+                           <ul class="nav nav-pills nav-stacked">
+                              <li class="active">
+                                 <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                 No Encontrado
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 mb-2">
+                  <div class="card-header-estado text-center">DATOS DEL EQUIPO</div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-8 border_bottom_separate">
+                  <div class="form-group row d-flex align-items-center">
+                     <label for="Cliente" class="col-xs-2 col-form-label">Cliente:</label>
+                     <div class="col-xs-10">
+                        <p>Nombre del cliente</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-4 border_bottom_separate">
+                  <div class="form-group row">
+                     <label for="fechaInspeccion" class="col-xs-2 col-form-label">Fecha:</label>
+                     <div class="col-xs-10">
+                        <p>27/05/2020 </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-8 text-left ">
+                  <div class="form-group row border_bottom_separate">
+                     <label for="inputEquipo" class="col-xs-2 col-form-label">Equipo:</label>
+                     <div class="col-xs-10 ">
+                        <p>Nombre del equipo  </p>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-6  text-left">
+                        <div class="form-group row border_bottom_separate">
+                           <label for="inputFabricante" class="col-xs-4 col-form-label">Fabricante:</label>
+                           <div class="col-xs-8">
+                              <p>Nombre del fabricante </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-6   text-left">
+                        <div class="form-group row border_bottom_separate">
+                           <label for="inputModelo" class="col-xs-4 col-form-label">Modelo:</label>
+                           <div class="col-xs-8">
+                              <p>Modelo del equipo  </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-6  text-left">
+                        <div class="form-group row border_bottom_separate">
+                           <label for="inputSerie" class="col-xs-4 col-form-label">Nº Serie:</label>
+                           <div class="col-xs-8">
+                              <p>Numero de serie equipo </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-6   text-left">
+                        <div class="form-group row border_bottom_separate">
+                           <label for="inputNi" class="col-xs-4 col-form-label">NºI:</label>
+                           <div class="col-xs-8">
+                              <p>N I del equipo </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-12  text-left">
+                        <div class="form-group row ">
+                           <label for="inputServicios" class="col-xs-2 col-form-label">Servicios:</label>
+                           <div class="col-xs-10">
+                              <p>Servicios </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-4 ">
+                  <div class="row " style="margin-top: 7px;">
+                     <div class="col-xs-12 text-left border_bottom_separate">
+                        <div class="form-group ">
+                           <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                           <b>Preventiva:</b>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row" style="margin-top: 8px;">
+                     <div class="col-xs-12 text-left border_bottom_separate">
+                        <div class="form-group ">
+                           <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                           <b> Correctiva:</b>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row " style="margin-top: 7px;">
+                     <div class="col-xs-12  text-left border_bottom_separate">
+                        <div class="form-group ">
+                           <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                           <b> En Contrato:</b>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row " style="margin-top: 7px;">
+                     <div class="col-xs-12    text-left">
+                        <div class="form-group ">
+                           <span class=" pull-right">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                           <b> Sin Contrato:</b>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- //FIN HEAD -->
+         <!-- CUALITATIVAS -->
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="card-header-estado text-center">PRUEBAS CUALITATIVAS</div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="panel panel-default panel-table">
+                     <div class="panel-heading">
+                        <div class="row">
+                           <div class="col-xs-6 ">
+                              <h4 class="panel-title">Inspección Visual:</h4>
+                           </div>
+                           <div class="col-xs-6 text-right"></div>
+                        </div>
+                     </div>
+                     <div class="panel-body">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>
+                                    Pasa
+                                 </th>
+                                 <th class="text-center">
+                                    Falla
+                                 </th>
+                                 <th colspan="2" class="text-center">
+                                    Descripción
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="panel-table-whith  ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>
+                                    Revisión generales de la carcasa del equipo.
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>
+                                    Verificación de ruedas i/o frenos.
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>
+                                    Revisión estado de cable de alimentación / conectores AC.
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container ">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="panel panel-default panel-table">
+                     <div class="panel-heading">
+                        <div class="row">
+                           <div class="col-xs-6 ">
+                              <h4 class="panel-title">Inspección interna:</h4>
+                           </div>
+                           <div class=" col-xs-6  text-right"></div>
+                        </div>
+                     </div>
+                     <div class="panel-body">
+                        <table class="table  table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>
+                                    Pasa
+                                 </th>
+                                 <th class="text-center">
+                                    Falla
+                                 </th>
+                                 <th colspan="2" class="text-center">
+                                    Descripción
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="2">
+                                    Verificar la presencia de todos los componentes electrónicos tales como fusibles, interruptores y pasa cables.
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>
+                                    Revisión generales de la carcasa del equipo
+                                 </td>
+                                 <td>
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="medicionActual">Medición actual:&nbsp&nbsp <span style="font-weight: 100;">123456789</span></label>                                
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="panel panel-default panel-table">
+                     <div class="panel-heading">
+                        <div class="row">
+                           <div class="col-xs-6 ">
+                              <h4 class="panel-title">Verificación Operacional:</h4>
+                           </div>
+                           <div class="col-xs-6  text-right"></div>
+                        </div>
+                     </div>
+                     <div class="panel-body">
+                        <table class="table  table-bordered table-responsive">
+                           <thead>
+                              <tr>
+                                 <th>
+                                    Pasa
+                                 </th>
+                                 <th class="text-center">
+                                    Falla
+                                 </th>
+                                 <th colspan="6" class="text-center">
+                                    Descripción
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="5">Verificar panel de control, Indicadores y Perillas.</td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="5">
+                                    Verificar Display.
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="5">
+                                    Revisión de filtro i/o Accesorios.
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>Revisión de parametros con analizador.</td>
+                                 <td>
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="Ecg">Ecg:&nbsp&nbsp </label>
+                                       <p>123456789</p>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="SPO2">SPO2:&nbsp&nbsp </label>
+                                       <p>123456789</p>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="Resp"> Resp:&nbsp&nbsp </label>
+                                       <p>123456789</p>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="Temp"> Temp:&nbsp&nbsp </label>
+                                       <p>123456789</p>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="5"> Verificacion de pistones, resortes a gas.</td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td>
+                                    Revisión con analizador.
+                                 </td>
+                                 <td colspan="5">
+                                    <div class="form-group form-inline mb-0">
+                                       <label for="medicionactual2">Medición actual:&nbsp&nbsp   <span style="font-weight: 100;">123456789</span></label>                                 
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Check_1063906.png" width="20">
+                                 </td>
+                                 <td class="panel-table-whith ">
+                                    <img src="img/Close_1031533.png" width="20">
+                                 </td>
+                                 <td colspan="5">
+                                    Sistema Operativo.
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container ">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="card-header-estado text-center">PRUEBAS CUANTITATIVAS</div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-6 ">
+                  <table class="table  table-bordered table-list">
+                     <thead>
+                        <tr>
+                           <th scope="col" colspan="2">
+                              SEGURIDAD ELECTRICA
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th scope="row">
+                              Selección
+                           </th>
+                           <td>
+                              Medición
+                           </td>
+                        </tr>
+                        <tr>
+                           <th class="fw-400">
+                              Corriente de fuga a chasis, con conexión directa al paciente &#8804; 300 µA.
+                           </th>
+                           <td>
+                              <span style="font-weight: 100;">123456789</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="fw-400">
+                              Voltaje red eléctrica.
+                           </th>
+                           <td>
+                              <span style="font-weight: 100;">123456789</span>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="col-xs-6  d-flex align-items-center">
+                  <div class="form-group form-inline mb-0" style="text-align: center;font-size: 13px;">
+                     <br /><br /><label for="fechaInspeccion2" >Próxima Mantención </label>
+                     <p style="font-weight: 700; font-size: 15px; text-align: center;"></span>27/05/2020</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="card-header-estado text-center">CALIBRACION Y MANTENIMIENTO</div>
+               </div>
+            </div>
+         </div>
+         <div class="container mb-4">
+            <div class="row">
+               <div class="col-xs-6 ">
+                  <table class="table table-bordered table-list">
+                     <thead>
+                        <tr>
+                           <th scope="col" class="panel-table-whith">
+                              Hecho
+                           </th>
+                           <th scope="col" class="text-center">
+                              Descripcion
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Limpieza exterior y accesorios.
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Limpieza interior y/o filtros.
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Lubricación de componentes móviles.
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Ajuste de componentes mecánicos.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="col-xs-6 ">
+                  <table class="table table-bordered table-list">
+                     <thead>
+                        <tr>
+                           <th scope="col" class="panel-table-whith">
+                              Hecho
+                           </th>
+                           <th scope="col" class="text-center">
+                              Descripcion
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Calibración
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Nivelación
+                           </td>
+                        </tr>
+                        <tr>
+                           <th scope="row" class="text-center">
+                              <img src="img/Check_1063906.png" width="20">
+                           </th>
+                           <td>
+                              Reemplazo
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class="container mb-1 ">
+            <div class="row">
+               <div class="col-xs-12 mb-1">
+                  <div class="text-center"><b>OBSERVACIONES</b></div>
+               </div>
+               <div class="container ">
+                  <div class="row">
+                     <div class="col-xs-12 mb-1">
+                        <p>Nullam pulvinar erat mauris, sed aliquet sapien laoreet eu. Vivamus dignissim mauris ac justo interdum, eget varius nulla rhoncus. Donec eget egestas lectus. In sed dui rhoncus, iaculis turpis eu, mollis metus.
+                           Nullam pulvinar erat mauris, sed aliquet sapien laoreet eu. Vivamus dignissim mauris ac justo interdum, eget varius nulla rhoncus. Donec eget egestas lectus. In sed dui rhoncus, iaculis turpis eu, mollis metus 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container mb-1  text-center">
+            <div class="row">
+               <div class="col-xs-6 mb-1" >
+                  <div class="card-header-estado text-center mb-1">ENTREGA</div>
+                  <div class="col-xs-12 d-flex justify-content-center">
+                     <img  id="firma_png"  src="img/firma_claudio.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                     <hr style="width:50%;text-align:left;">
+                     <p style="margin-bottom: 0px; line-height: 12px;">Claudio Berrios</p>
+                     <p style="margin-bottom: 0px;">12345678-0</p>
+                  </div>
+               </div>
+               <div class="col-xs-6 mb-1  text-center">
+                  <div class="card-header-estado text-center mb-1">RECIBE</div>
+                  <div class="col-xs-12 d-flex justify-content-center">
+                     <img  id="firma_png"  src="img/firma_jona.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                     <hr style="width:50%;text-align:left">
+                     <p style="margin-bottom: 0px; line-height: 12px;">Jonathan Acosta</p>
+                     <p style="margin-bottom: 0px;">12345678-0</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      <!-- // DIV FIN PDF -->
+      </div>
+      <!-- //DIV FIN PDF -->
+      <!-- Bootstrap core JavaScript -->    
+      <script src="https://code.jquery.com/jquery-1.9.1.js"></script>      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+      <script>
+         var options = {
+               margin: 0.5,
+               filename: 'Informe_Tecnico.pdf',
+               pagebreak: {before: '.jqInspeccionInterna' } ,
+               image: {
+                  type: 'jpeg',
+                  quality: 0.98
+               },
+               html2canvas: {
+                  scale: 1
+               },
+               jsPDF: {
+                  unit: 'cm',
+                  format: 'legal',
+                  orientation: 'portrait'
+               }
+            }
+         
+            $('.btn-download').click(function(e){
+               e.preventDefault();
+               const element = document.getElementById('pdf');
+               console.log(html2pdf().from(element).set(options).then());
+               html2pdf().from(element).set(options).save();
+            });         
+      </script>  
+   </body>
+</html>

@@ -5,51 +5,60 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
       <title>Medex - Informe Técnico</title>
       <!-- Bootstrap CSS -->
-      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <!-- Custom styles-->
       <link href="css/style.css" rel="stylesheet">
       <!-- calendario-->
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-      <!-- TExt area-->
+     
       <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
+      <link href="css/style-non-responsive.css" rel="stylesheet">
+       <!-- Firma -->
+       <link rel="stylesheet" href="css/signature-pad.css">
+       <!-- TExt area-->
+   
    </head>
-   <body>
+   <body >
+      
       <!-- HEAD -->
       <div class="container mb-4">
          <div class="row d-flex align-items-center">
-            <div class="col-sm text-center mb-4">
+            <div class="col-md-4 text-center mb-4">
                <img src="img/logo.jpg">
             </div>
-            <div class="col-sm text-center mb-4">
+            <div class="col-md-4 text-center mb-4">
                <h2>INFORME TECNICO</h2>
             </div>
-            <div class="col-sm">
+            <div class="col-md-4">
                <div class="card text-center">
                   <div class="card-header-estado">Estado</div>
                   <ul class="list-group list-group-flush">
                      <li class="list-group-item text-left">
                         Aceptado
-                        <input type="radio" class="option-input radio" name="informeTecnicoEstado" />
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoEstado" value="stateAceptado" />
                      </li>
                   </ul>
                   <ul class="list-group list-group-flush">
                      <li class="list-group-item  text-left">
                         Requiere Servicio
-                        <input type="radio" class="option-input radio" name="informeTecnicoEstado" />
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoEstado" value="stateReqService" />
                      </li>
                   </ul>
                   <ul class="list-group list-group-flush">
                      <li class="list-group-item  text-left">
                         Dado de Baja
-                        <input type="radio" class="option-input radio" name="informeTecnicoEstado" />
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoEstado" value="stateBaja" />
                      </li>
                   </ul>
                   <ul class="list-group list-group-flush">
                      <li class="list-group-item  text-left">
                         No Encontrado
-                        <input type="radio" class="option-input radio" name="informeTecnicoEstado" />
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoEstado" value="stateNoEncontrado" />
                      </li>
                   </ul>
                </div>
@@ -58,7 +67,7 @@
       </div>
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 mb-4">
+            <div class="col-md-12 mb-4">
                <div class="card-header-estado text-center">DATOS DEL EQUIPO</div>
             </div>
          </div>
@@ -67,17 +76,17 @@
          <div class="row">
             <div class="col-sm-8">
                <div class="form-group row">
-                  <label for="Cliente" class="col-sm-2 col-form-label">Cliente:</label>
+                  <label for="nameCliente" class="col-sm-2 col-form-label">Cliente:</label>
                   <div class="col-sm-10">
-                     <input type="text" class="form-control" id="Cliente">
+                     <input type="text" class="form-control" id="nameCliente">
                   </div>
                </div>
             </div>
             <div class="col-sm-4">
                <div class="form-group row">
-                  <label for="fechaInspeccion" class="col-sm-2 col-form-label">Fecha:</label>
+                  <label class="col-sm-2 col-form-label">Fecha:</label>
                   <div class="col-sm-10">
-                     <input autocomplete="off" class="fechaInspeccion form-control" placeholder="" />
+                     <input autocomplete="off" class="fechaInspeccionActual form-control jqInputFechas" id="fechaMantencion" placeholder="" />
                   </div>
                </div>
             </div>
@@ -103,9 +112,9 @@
                   </div>
                   <div class="col-lg-6 col-md-6  text-left">
                      <div class="form-group row mt-3">
-                        <label for="inputModelo" class="col-sm-4 col-form-label">Modelo:</label>
+                        <label for="inputModeloEquipo" class="col-sm-4 col-form-label">Modelo:</label>
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="inputModelo">
+                           <input type="text" class="form-control" id="inputModeloEquipo">
                         </div>
                      </div>
                   </div>
@@ -113,17 +122,17 @@
                <div class="row">
                   <div class="col-lg-6 col-md-6  text-left">
                      <div class="form-group row mt-3">
-                        <label for="inputSerie" class="col-sm-4 col-form-label">Nº Serie:</label>
+                        <label for="inputNumSerie" class="col-sm-4 col-form-label">Nº Serie:</label>
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="inputSerie">
+                           <input type="text" class="form-control" id="inputNumSerie">
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-6 col-md-6  text-left">
                      <div class="form-group row mt-3">
-                        <label for="inputNi" class="col-sm-4 col-form-label">NºI:</label>
+                        <label for="inputNumInventario" class="col-sm-4 col-form-label">NºI:</label>
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="inputNi">
+                           <input type="text" class="form-control" id="inputNumInventario">
                         </div>
                      </div>
                   </div>
@@ -138,35 +147,35 @@
                </div>
             </div>
             <div class="col-sm-4 ">
-               <div class="row " style="margin-top: 8%;">
+               <div class="row " style="margin-top: 5%;">
                   <div class="col-lg-12 col-md-12 text-left">
-                     <div class="form-group ">
+                     <div class="form-group mr-5">
                         <label for="informeTecnicoDatosEquipo">Preventiva:</label>
-                        <input type="radio" class="option-input radio" name="informeTecnicoDatosEquipo" value="Preventiva"/>
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoDatosEquipo" value="Preventiva"/>
                      </div>
                   </div>
                </div>
-               <div class="row" style="margin-top: 8%;">
+               <div class="row" style="margin-top: 5%;">
                   <div class="col-lg-12 col-md-12 text-left">
-                     <div class="form-group ">
+                     <div class="form-group mr-5">
                         <label for="informeTecnicoDatosEquipo">Correctiva:</label>
-                        <input type="radio" class="option-input radio" name="informeTecnicoDatosEquipo" value="Correctiva"/>
+                        <input type="radio" class="option-input-check radio" name="informeTecnicoDatosEquipo" value="Correctiva"/>
                      </div>
                   </div>
                </div>
-               <div class="row " style="margin-top: 8%;">
+               <div class="row " style="margin-top: 5%;">
                   <div class="col-lg-12 col-md-12  text-left">
-                     <div class="form-group ">
-                        <label for="informeTecnicoDatosEquipo">En Contrato:</label>
-                        <input type="radio" class="option-input radio" name="informeTecnicoDatosEquipo" value="EnContrato"/>
+                     <div class="form-group mr-5">
+                        <label for="DatosEquipoContrato">En Contrato:</label>
+                        <input type="radio" class="option-input-check radio" name="DatosEquipoContrato" value="EnContrato"/>
                      </div>
                   </div>
                </div>
-               <div class="row " style="margin-top: 7%;">
+               <div class="row " style="margin-top: 5%;">
                   <div class="col-lg-12 col-md-12    text-left">
-                     <div class="form-group ">
-                        <label for="informeTecnicoDatosEquipo">Sin Contrato:</label>
-                        <input type="radio" class="option-input radio" name="informeTecnicoDatosEquipo" value="SinContrato"/>
+                     <div class="form-group mr-5">
+                        <label for="DatosEquipoContrato">Sin Contrato:</label>
+                        <input type="radio" class="option-input-check radio" name="DatosEquipoContrato" value="SinContrato"/>
                      </div>
                   </div>
                </div>
@@ -177,14 +186,14 @@
       <!-- CUALITATIVAS -->
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 mb-4">
+            <div class="col-lg-12 col-md-12">
                <div class="card-header-estado text-center">PRUEBAS CUALITATIVAS</div>
             </div>
          </div>
       </div>
       <div class="container">
          <div class="row">
-            <div class="col-md-12 mb-4">
+            <div class="col-md-12">
                <div class="panel panel-default panel-table">
                   <div class="panel-heading">
                      <div class="row">
@@ -212,10 +221,10 @@
                         <tbody>
                            <tr>
                               <td class="panel-table-whith  ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe1" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe1" value="informe1OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe1" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe1" value="informe1Falla" />
                               </td>
                               <td>
                                  Revisión generales de la carcasa del equipo.
@@ -223,10 +232,10 @@
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe2" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe2" value="informe2OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe2" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe2" value="informe2Falla" />
                               </td>
                               <td>
                                  Verificación de ruedas i/o frenos.
@@ -234,10 +243,10 @@
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe3" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe3" value="informe3OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe3" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe3" value="informe3Falla" />
                               </td>
                               <td>
                                  Revisión estado de cable de alimentación / conectores AC.
@@ -252,7 +261,7 @@
       </div>
       <div class="container ">
          <div class="row">
-            <div class="col-md-12 mb-4">
+            <div class="col-md-12 ">
                <div class="panel panel-default panel-table">
                   <div class="panel-heading">
                      <div class="row">
@@ -262,67 +271,67 @@
                         <div class="col-12 col-md-6  text-right"></div>
                      </div>
                   </div>
-               </div>
-               <div class="panel-body">
-                  <table class="table  table-bordered">
-                     <thead>
-                        <tr>
-                           <th>
-                              Pasa
-                           </th>
-                           <th class="text-center">
-                              Falla
-                           </th>
-                           <th colspan="2" class="text-center">
-                              Descripción
-                           </th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td class="panel-table-whith ">
-                              <input type="radio" class="option-input radio center-radius" name="informe4" />
-                           </td>
-                           <td class="panel-table-whith ">
-                              <input type="radio" class="option-input radio center-radius" name="informe4" />
-                           </td>
-                           <td colspan="2">
-                              Verificar la presencia de todos los componentes electrónicos tales como fusibles, interruptores y pasa cables.
-                           </td>
-                        </tr>
-                        <tr>
-                           <td class="panel-table-whith ">
-                              <input type="radio" class="option-input radio center-radius" name="informe5" />
-                           </td>
-                           <td class="panel-table-whith ">
-                              <input type="radio" class="option-input radio center-radius" name="informe5" />
-                           </td>
-                           <td>
-                              Revisión generales de la carcasa del equipo
-                           </td>
-                           <td>
-                              <div class="form-group form-inline mb-0">
-                                 <label for="medicionActual">Medición actual:&nbsp&nbsp </label>
-                                 <input type="text" class="form-control" id="medicionActual" aria-describedby="medicionActual">
-                              </div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
+                  <div class="panel-body">
+                     <table class="table  table-bordered">
+                        <thead>
+                           <tr>
+                              <th>
+                                 Pasa
+                              </th>
+                              <th class="text-center">
+                                 Falla
+                              </th>
+                              <th colspan="2" class="text-center">
+                                 Descripción
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="panel-table-whith ">
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe4" value="informe4OK" />
+                              </td>
+                              <td class="panel-table-whith ">
+                                 <input type="radio" class="option-input radio center-radius" name="informe4" value="informe4Falla" />
+                              </td>
+                              <td colspan="2">
+                                 Verificar la presencia de todos los componentes electrónicos tales como fusibles, interruptores y pasa cables.
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="panel-table-whith ">
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe5" value="informe5OK" />
+                              </td>
+                              <td class="panel-table-whith ">
+                                 <input type="radio" class="option-input radio center-radius" name="informe5" value="informe5Falla" />
+                              </td>
+                              <td>
+                                 Revisión batería de respaldo
+                              </td>
+                              <td>
+                                 <div class="form-group form-inline mb-0">
+                                    <label for="medicionActual">Medición actual:&nbsp&nbsp </label>
+                                    <input type="text" class="form-control" id="medicionActual" aria-describedby="medicionActual">
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-      <div class="container mb-4">
+      <div class="container ">
          <div class="row">
-            <div class="col-md-12 mb-4 ">
+            <div class="col-md-12  ">
                <div class="panel panel-default panel-table">
                   <div class="panel-heading">
                      <div class="row">
-                        <div class="col-12 col-md-6 ">
+                        <div class="col-md-6 ">
                            <h4 class="panel-title">Verificación Operacional:</h4>
                         </div>
-                        <div class="col-12 col-md-6  text-right"></div>
+                        <div class=" col-md-6  text-right"></div>
                      </div>
                   </div>
                   <div class="panel-body">
@@ -343,19 +352,19 @@
                         <tbody>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe6" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe6" value="informe6OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe6" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe6" value="informe6Falla" />
                               </td>
                               <td colspan="5">Verificar panel de control, Indicadores y Perillas.</td>
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe7" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe7" value="informe7OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe7" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe7" value="informe7Falla" />
                               </td>
                               <td colspan="5">
                                  Verificar Display.
@@ -363,63 +372,53 @@
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe8" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe8" value="informe8OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe8" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe8" value="informe8Falla" />
                               </td>
                               <td colspan="5">
                                  Revisión de filtro i/o Accesorios.
                               </td>
                            </tr>
-                           <tr>
+                           <tr >
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe9" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe9" value="informe9OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe9" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe9" value="informe9Falla" />
                               </td>
                               <td>Revisión de parametros con analizador.</td>
                               <td>
-                                 <div class="form-group form-inline mb-0">
-                                    <label for="Ecg">Ecg:&nbsp&nbsp </label>
-                                    <input type="text" class="form-control" id="Ecg" aria-describedby="Ecg" style="width: 80px;">
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="form-group form-inline mb-0">
-                                    <label for="SPO2">SPO2:&nbsp&nbsp </label>
-                                    <input type="text" class="form-control" id="SPO2" aria-describedby="SPO2" style="width: 80px;">
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="form-group form-inline mb-0">
-                                    <label for="Resp"> Resp:&nbsp&nbsp </label>
-                                    <input type="text" class="form-control" id="Resp" aria-describedby="Resp" style="width: 80px;">
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="form-group form-inline mb-0">
-                                    <label for="Temp"> Temp:&nbsp&nbsp </label>
-                                    <input type="text" class="form-control" id="Temp" aria-describedby="Temp" style="width: 80px;">
-                                 </div>
+                                 <form class="form-inline">
+                                    <div class="form-group">
+                                       <label for="Ecg" class="mb-4">Ecg&nbsp:&nbsp&nbsp&nbsp</label>
+                                       <input type="text" id="inputECG" class="form-control" id="Ecg" aria-describedby="Ecg">
+                                       <label for="SPO2">SPO2:&nbsp&nbsp</label>
+                                       <input type="text" id="inputSPO2" class="form-control" id="SPO2" aria-describedby="SPO2" ><br />
+                                       <label for="Resp"> Resp:&nbsp&nbsp </label>
+                                       <input type="text" id="inputResp" class="form-control" id="Resp" aria-describedby="Resp">
+                                       <label for="Temp"> Temp:&nbsp&nbsp </label>
+                                       <input type="text" id="inputTemp" class="form-control" id="Temp" aria-describedby="Temp">
+                                    </div>
+                                 </form>
                               </td>
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe10" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe10" value="informe10OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe10" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe10" value="informe10Falla" />
                               </td>
                               <td colspan="5"> Verificacion de pistones, resortes a gas.</td>
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe11" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe11" value="informe11OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe11" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe11" value="informe11Falla" />
                               </td>
                               <td>
                                  Revisión con analizador.
@@ -433,10 +432,10 @@
                            </tr>
                            <tr>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe12" />
+                                 <input type="radio" class="option-input-check radio center-radius" name="informe12" value="informe12OK" />
                               </td>
                               <td class="panel-table-whith ">
-                                 <input type="radio" class="option-input radio center-radius" name="informe12" />
+                                 <input type="radio" class="option-input radio center-radius" name="informe12" value="informe12Falla" />
                               </td>
                               <td colspan="5">
                                  Sistema Operativo.
@@ -449,16 +448,16 @@
             </div>
          </div>
       </div>
-      <div class="container mb-4">
+      <div class="container ">
          <div class="row">
-            <div class="col-lg-12 col-md-12 mb-4">
+            <div class="col-md-12 ">
                <div class="card-header-estado text-center">PRUEBAS CUANTITATIVAS</div>
             </div>
          </div>
       </div>
-      <div class="container mb-4">
+      <div class="container ">
          <div class="row">
-            <div class="col-12 col-md-6 ">
+            <div class="col-md-6 ">
                <table class="table  table-bordered table-list">
                   <thead>
                      <tr>
@@ -495,24 +494,24 @@
                   </tbody>
                </table>
             </div>
-            <div class="col-12 col-md-6  d-flex align-items-center">
-               <div class="form-group form-inline mb-0">
+            <div class="col-md-6 mb-3" >
+               <div class="form-group form-inline mb-0 " >
                   <label for="proximaMantencion">Próxima Mantención :&nbsp&nbsp </label>
-                  <input type="text" class="fechaInspeccion form-control" id="fechaInspeccion2" aria-describedby="proximaMantencion">
+                  <input type="text" id="proxMantencion" class="proximaMantencion form-control jqInputFechas"  aria-describedby="proximaMantencion">
                </div>
             </div>
          </div>
       </div>
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 mb-4">
+            <div class="col-md-12 ">
                <div class="card-header-estado text-center">CALIBRACION Y MANTENIMIENTO</div>
             </div>
          </div>
       </div>
-      <div class="container mb-4">
+      <div class="container ">
          <div class="row">
-            <div class="col-12 col-md-6 ">
+            <div class="col-md-6 ">
                <table class="table table-bordered table-list">
                   <thead>
                      <tr>
@@ -527,7 +526,7 @@
                   <tbody>
                      <tr>
                         <th class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe15" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe15" value="informe15OK" />
                         </th>
                         <td>
                            Limpieza exterior y accesorios.
@@ -535,7 +534,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe15" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe16" value="informe16OK" />
                         </th>
                         <td>
                            Limpieza interior y/o filtros.
@@ -543,7 +542,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe15" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe17" value="informe17OK" />
                         </th>
                         <td>
                            Lubricación de componentes móviles.
@@ -551,7 +550,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe15" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe18" value="informe18OK" />
                         </th>
                         <td>
                            Ajuste de componentes mecánicos.
@@ -560,7 +559,7 @@
                   </tbody>
                </table>
             </div>
-            <div class="col-12 col-md-6 ">
+            <div class="col-md-6 ">
                <table class="table table-bordered table-list">
                   <thead>
                      <tr>
@@ -575,7 +574,7 @@
                   <tbody>
                      <tr>
                         <th class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe16" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe19" value="informe19OK" />
                         </th>
                         <td>
                            Calibración
@@ -583,7 +582,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe16" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe20" value="informe20OK" />
                         </th>
                         <td>
                            Nivelación
@@ -591,7 +590,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-center">
-                           <input type="radio" class="option-input radio center-radius" name="informe16" />
+                           <input type="radio" class="option-input-check radio center-radius" name="informe21" value="informe21OK" />
                         </th>
                         <td>
                            Reemplazo
@@ -602,15 +601,15 @@
             </div>
          </div>
       </div>
-      <div class="container mb-4">
+      <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 mb-4">
+            <div class="col-md-12 mb-4">
                <div class="text-center"><b>OBSERVACIONES</b></div>
             </div>
             <div class="container ">
                <div class="row">
-                  <div class="col-lg-12 col-md-12 mb-4">
-                     <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
+                  <div class="col-md-12 mb-4">
+                     <textarea name="editor1" rows="10" cols="80"></textarea>
                   </div>
                </div>
             </div>
@@ -618,24 +617,24 @@
       </div>
       <div class="container mb-4">
          <div class="row">
-            <div class="col-lg-6 col-md-6 mb-4">
+            <div class="col-md-6 mb-4" >
                <div class="card-header-estado text-center mb-4">ENTREGA</div>
                <div class="form-group" >
-                  <label for="exampleFormControlSelect1">Nombre Tecnico</label>
+                  <label >Nombre Tecnico</label>
                   <select class="form-control" id="sel-firma">
                      <option value="img/firme_aqui.png">Seleccione nombre </option>
-                     <option value="img/firma_claudio.png">Claudio Berrios</option>
-                     <option value="img/firma_jona.png">Jonathan Acosta</option>
+                     <option data-rut="20.119.722-8" value="img/firma_claudio_timbre.png">Javier Vidal</option>
+                     <option data-rut="17.781.069-k" value="img/firma_jona.png">Cristian Acosta</option>
                   </select>
                </div>
                <div class="col-lg-12 col-md-12 mb-12 d-flex justify-content-center">
-                  <img  id="firma_png"  src="img/firme_aqui.png" alt="firme aqui"  class="img-fluid" >
+                  <img  class="firma_png"  src="img/firme_aqui.png" alt="firme aqui"  class="img-responsive" >
                </div>
             </div>
-            <div class="col-lg-6 col-md-6 mb-4">
+            <div class="col-md-6 mb-4">
                <div class="card-header-estado text-center mb-4">RECIBE</div>
                <div class="form-group">
-                  <label for="nombreRecibe">Nombre:</label>
+                  <label>Nombre:</label>
                   <input type="text" class="form-control" id="nomreRecibe" aria-describedby="nombreRecibe">
                </div>
                <div class="form-group">
@@ -646,22 +645,690 @@
                   <label for="emailRecibe">Email:</label>
                   <input type="email" class="form-control" id="emailRecibe" aria-describedby="emailRecibe">
                </div>
-               <div class="form-group mb-4">
-                  <button data-target="#myModal" data-toggle="modal" data-backdrop="static" data-keyboard="false">
-                  Firma Cliente
-                  </button>
+               <div class="bodyy">
+                  <div id="signature-pad" class="signature-pad">
+                     <div class="signature-pad--body">
+                        <canvas width="664" height="373" style="touch-action: none;"></canvas>
+                     </div>
+                     <div class="signature-pad--footer">
+                        <div class="signature-pad--actions">
+                         
+                        <div>                                
+                     </div>
+                    
+                  </div>
+                  <p>Firme arriba de la linea</p>
+               </div>  
+               
+                            
+               <div data-toggle="buttons" class="text-center" >                  
+                  <button type="button" class="clear btn btn-warning btn-circle btn-lg" data-action="clear"><i class="glyphicon glyphicon-repeat"></i></button>
+                  <button type="button" class="save btn btn-success btn-circle btn-lg" data-action="save-png"><i class="glyphicon glyphicon-ok"></i></button>                 
+                </div>  
+         </div>
+         </div>
+		 <div class="form-group mb-4 btn-download">
+			<button>Obtener PDF</button>
+		 </div>
+      </div>
+            <!-- ******************************************PDF************************************************************* -->
+            <!-- ******************************************PDF************************************************************* -->
+            <!-- ******************************************PDF************************************************************* -->
+            <div class="ocultar">
+               <div id="pdf" >
+                  <div class="container">
+                     <div class="row d-flex align-items-center">
+                        <div class="col-xs-4 text-center ">
+                           <img src="img/logo.jpg" width="125px">
+                        </div>
+                        <div class="col-xs-4 text-center mb-4">
+                           <h3>INFORME TECNICO</h3>
+                           <h4>Nº <span id="folioInforme"></span></h4>
+                        </div>
+                        <div class="col-xs-4">
+                           <div class="card text-center">
+                              <div class="card-header-estado">Estado</div>
+                              <ul class="list-group list-group-flush">
+                                 <li class="list-group-item text-left">
+                                    <ul class="nav nav-pills nav-stacked">
+                                       <li class="active">
+                                          <span id="stateAceptado" class=" pull-right ocultar jqinformeTecnicoEstado">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                          <span class="parrafo_12">Aceptado</span> 
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                              <ul class="list-group list-group-flush">
+                                 <li class="list-group-item text-left">
+                                    <ul class="nav nav-pills nav-stacked">
+                                       <li class="active">
+                                          <span id="stateReqService" class=" pull-right ocultar jqinformeTecnicoEstado">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                          <span class="parrafo_12">Requiere Servicio</span>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                              <ul class="list-group list-group-flush">
+                                 <li class="list-group-item text-left">
+                                    <ul class="nav nav-pills nav-stacked">
+                                       <li class="active">
+                                          <span id="stateBaja" class=" pull-right ocultar jqinformeTecnicoEstado">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                          <span class="parrafo_12"> Dado de Baja</span>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                              <ul class="list-group list-group-flush">
+                                 <li class="list-group-item text-left">
+                                    <ul class="nav nav-pills nav-stacked">
+                                       <li class="active">
+                                          <span id="stateNoEncontrado" class=" pull-right ocultar jqinformeTecnicoEstado">  <img src="img/Check_1063906.png" width="20" style="margin-right: 30px;"></span>
+                                          <span class="parrafo_12">No Encontrado</span>  
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-12 mb-2">
+                           <div class="card-header-estado text-center">DATOS DEL EQUIPO</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-8 border_bottom_separate">
+                           <div class="form-group row d-flex align-items-center">
+                              <label for="Cliente" class="col-xs-2 col-form-label">Cliente:</label>
+                              <div class="col-xs-10">
+                                 <p class="nameCliente" ></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xs-4 border_bottom_separate">
+                           <div class="form-group row">
+                              <label for="fechaInspeccion" class="col-xs-2 col-form-label">Fecha:</label>
+                              <div class="col-xs-10">
+                                 <p class="fechaMantencion" ></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-8 text-left ">
+                           <div class="form-group row border_bottom_separate">
+                              <label for="inputEquipo" class="col-xs-2 col-form-label">Equipo:</label>
+                              <div class="col-xs-10 ">
+                                 <p class="inputEquipo" ></p>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-xs-6  text-left">
+                                 <div class="form-group row border_bottom_separate">
+                                    <label for="inputFabricante" class="col-xs-4 col-form-label">Fabricante:</label>
+                                    <div class="col-xs-8">
+                                       <p class="inputFabricante"></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xs-6   text-left">
+                                 <div class="form-group row border_bottom_separate">
+                                    <label for="inputModelo" class="col-xs-4 col-form-label">Modelo:</label>
+                                    <div class="col-xs-8">
+                                       <p class="inputModeloEquipo"></p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-xs-6  text-left">
+                                 <div class="form-group row border_bottom_separate">
+                                    <label for="inputSerie" class="col-xs-4 col-form-label">Nº Serie:</label>
+                                    <div class="col-xs-8">
+                                       <p class="inputNumSerie" ></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xs-6   text-left">
+                                 <div class="form-group row border_bottom_separate">
+                                    <label for="inputNi" class="col-xs-4 col-form-label">NºI:</label>
+                                    <div class="col-xs-8">
+                                       <p class="inputNumInventario" ></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xs-12  text-left">
+                                 <div class="form-group row ">
+                                    <label for="inputServicios" class="col-xs-2 col-form-label">Servicios:</label>
+                                    <div class="col-xs-10">
+                                       <p class="inputServicios"></p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xs-4 ">
+                           <div class="row " style="margin-top: 7px;">
+                              <div class="col-xs-12 text-left border_bottom_separate">
+                                 <div class="form-group ">
+                                    <span id="Preventiva" class=" pull-right ocultar jqinformeTecnicoDatosEquipo">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                                    <b class="parrafo_12">Preventiva:</b>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row" style="margin-top: 8px;">
+                              <div class="col-xs-12 text-left border_bottom_separate">
+                                 <div class="form-group ">
+                                    <span id="Correctiva" class=" pull-right ocultar jqinformeTecnicoDatosEquipo">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                                    <b class="parrafo_12"> Correctiva:</b>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row " style="margin-top: 7px;">
+                              <div class="col-xs-12  text-left border_bottom_separate">
+                                 <div class="form-group ">
+                                    <span id="EnContrato" class=" pull-right ocultar jqDatosEquipoContrato">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                                    <b class="parrafo_12"> En Contrato:</b>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row " style="margin-top: 6px;">
+                              <div class="col-xs-12    text-left">
+                                 <div class="form-group ">
+                                    <span id="SinContrato" class=" pull-right ocultar jqDatosEquipoContrato">  <img src="img/Check_1063906.png" width="20" style="margin-right: 83px;"></span>
+                                    <b class="parrafo_12"> Sin Contrato:</b>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="card-header-estado text-center">PRUEBAS CUALITATIVAS</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="panel panel-default panel-table">
+                              <div class="panel-heading">
+                                 <div class="row">
+                                    <div class="col-xs-6 ">
+                                       <h4 class="panel-title">Inspección Visual:</h4>
+                                    </div>
+                                    <div class="col-xs-6 text-right"></div>
+                                 </div>
+                              </div>
+                              <div class="panel-body">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th>
+                                             Pasa
+                                          </th>
+                                          <th class="text-center">
+                                             Falla
+                                          </th>
+                                          <th colspan="2" class="text-center">
+                                             Descripción
+                                          </th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td class="panel-table-whith  ">
+                                             <img id="informe1OK" class="ocultar jqinforme1" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe1Falla" class="ocultar jqinforme1"src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>
+                                             Revisión generales de la carcasa del equipo.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe2OK" class="ocultar jqinforme2" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe2Falla" class="ocultar jqinforme2" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>
+                                             Verificación de ruedas i/o frenos.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe3OK" class="ocultar jqinforme3" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe3Falla" class="ocultar jqinforme3" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>
+                                             Revisión estado de cable de alimentación / conectores AC.
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container ">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="panel panel-default panel-table">
+                              <div class="panel-heading">
+                                 <div class="row">
+                                    <div class="col-xs-6 ">
+                                       <h4 class="panel-title">Inspección interna:</h4>
+                                    </div>
+                                    <div class=" col-xs-6  text-right"></div>
+                                 </div>
+                              </div>
+                              <div class="panel-body">
+                                 <table class="table ">
+                                    <thead>
+                                       <tr>
+                                          <th>
+                                             Pasa
+                                          </th>
+                                          <th class="text-center">
+                                             Falla
+                                          </th>
+                                          <th colspan="2" class="text-center">
+                                             Descripción
+                                          </th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe4OK" class="ocultar jqinforme4" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe4Falla" class="ocultar jqinforme4" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="2">
+                                             Verificar la presencia de todos los componentes electrónicos tales como fusibles, interruptores y pasa cables.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe5OK" class="ocultar jqinforme5" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe5Falla" class="ocultar jqinforme5" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>
+                                             Revisión batería de respaldo
+                                          </td>
+                                          <td>
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="medicionActual">Medición actual:&nbsp&nbsp <span style="font-weight: 100;" class="medicionActual"></span></label>                                
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="panel panel-default panel-table">
+                              <div class="panel-heading">
+                                 <div class="row">
+                                    <div class="col-xs-6 ">
+                                       <h4 class="panel-title">Verificación Operacional:</h4>
+                                    </div>
+                                    <div class="col-xs-6  text-right"></div>
+                                 </div>
+                              </div>
+                              <div class="panel-body">
+                                 <table class="table  table-bordered ">
+                                    <thead>
+                                       <tr>
+                                          <th>
+                                             Pasa
+                                          </th>
+                                          <th class="text-center">
+                                             Falla
+                                          </th>
+                                          <th colspan="6" class="text-center">
+                                             Descripción
+                                          </th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe6OK" class="ocultar jqinforme6" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe6Falla" class="ocultar jqinforme6" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="5">Verificar panel de control, Indicadores y Perillas.</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe7OK" class="ocultar jqinforme7" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe7Falla" class="ocultar jqinforme7" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="5">
+                                             Verificar Display.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe8OK" class="ocultar jqinforme8" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe8Falla" class="ocultar jqinforme8" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="5">
+                                             Revisión de filtro i/o Accesorios.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe9OK" class="ocultar jqinforme9" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe9Falla" class="ocultar jqinforme9" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>Revisión de parametros con analizador.</td>
+                                          <td>
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="Ecg">Ecg:&nbsp&nbsp </label>
+                                                <p class="inputECG" ></p>
+                                             </div>
+                                          </td>
+                                          <td>
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="SPO2">SPO2:&nbsp&nbsp </label>
+                                                <p class="inputSPO2" ></p>
+                                             </div>
+                                          </td>
+                                          <td>
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="Resp"> Resp:&nbsp&nbsp </label>
+                                                <p class="inputResp" ></p>
+                                             </div>
+                                          </td>
+                                          <td>
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="Temp"> Temp:&nbsp&nbsp </label>
+                                                <p class="inputTemp" ></p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe10OK" class="ocultar jqinforme10" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe10Falla" class="ocultar jqinforme10" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="5"> Verificacion de pistones, resortes a gas.</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe11OK" class="ocultar jqinforme11" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe11Falla" class="ocultar jqinforme11" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td>
+                                             Revisión con analizador.
+                                          </td>
+                                          <td colspan="5">
+                                             <div class="form-group form-inline mb-0">
+                                                <label for="medicionactual2">Medición actual:&nbsp&nbsp   <span style="font-weight: 100;" class="medicionactual2"></span></label>                                 
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe12OK" class="ocultar jqinforme12" src="img/Check_1063906.png" width="20">
+                                          </td>
+                                          <td class="panel-table-whith ">
+                                             <img id="informe12Falla" class="ocultar jqinforme12" src="img/Close_1031533.png" width="20">
+                                          </td>
+                                          <td colspan="5">
+                                             Sistema Operativo.
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container ">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="card-header-estado text-center">PRUEBAS CUANTITATIVAS</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-6 ">
+                           <table class="table  table-bordered table-list">
+                              <thead>
+                                 <tr>
+                                    <th scope="col" colspan="2">
+                                       SEGURIDAD ELECTRICA
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row">
+                                       Selección
+                                    </th>
+                                    <td>
+                                       Medición
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th class="fw-400">
+                                       Corriente de fuga a chasis, con conexión directa al paciente &#8804; 300 µA.
+                                    </th>
+                                    <td>
+                                       <span class="corrienteDeFugaAChasis" style="font-weight: 100;"></span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="fw-400">
+                                       Voltaje red eléctrica.
+                                    </th>
+                                    <td>
+                                       <span class="voltajeRedElectrica" style="font-weight: 100;"></span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="col-xs-6  d-flex align-items-center">
+                           <div class="form-group form-inline mb-0" style="text-align: center;font-size: 13px;">
+                              <br /><br /><label for="fechaInspeccion2" >Próxima Mantención </label>
+                              <p class="proxMantencion" style="font-weight: 700; font-size: 15px; text-align: center;"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="card-header-estado text-center">CALIBRACION Y MANTENIMIENTO</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container mb-4">
+                     <div class="row">
+                        <div class="col-xs-6 ">
+                           <table class="table table-bordered table-list">
+                              <thead>
+                                 <tr>
+                                    <th scope="col" class="panel-table-whith">
+                                       Hecho
+                                    </th>
+                                    <th scope="col" class="text-center">
+                                       Descripcion
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th class="text-center">
+                                       <img id="informe15OK" class="ocultar jqinforme15" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Limpieza exterior y accesorios.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="text-center">
+                                       <img id="informe16OK" class="ocultar jqinforme16" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Limpieza interior y/o filtros.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="text-center">
+                                       <img id="informe17OK" class="ocultar jqinforme17" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Lubricación de componentes móviles.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="text-center">
+                                       <img id="informe18OK" class="ocultar jqinforme18" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Ajuste de componentes mecánicos.
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="col-xs-6">
+                           <table class="table table-bordered table-list">
+                              <thead>
+                                 <tr>
+                                    <th scope="col" class="panel-table-whith">
+                                       Hecho
+                                    </th>
+                                    <th scope="col" class="text-center">
+                                       Descripcion
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th class="text-center">
+                                       <img id="informe19OK" class="ocultar jqinforme19" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Calibración
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="text-center">
+                                       <img id="informe20OK" class="ocultar jqinforme20" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Nivelación
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="text-center">
+                                       <img id="informe21OK" class="ocultar jqinforme21" src="img/Check_1063906.png" width="20">
+                                    </th>
+                                    <td>
+                                       Reemplazo
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container mb-1 ">
+                     <div class="row">
+                        <div class="col-xs-12 mb-1">
+                           <div class="text-center"><b>OBSERVACIONES</b></div>
+                        </div>
+                        <div class="container ">
+                           <div class="row">
+                              <div id="observacionPDF" class="col-xs-12 mb-1">
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container mb-1  text-center">
+                     <div class="row">
+                        <div class="col-xs-6 mb-1" >
+                           <div class="card-header-estado text-center mb-1">ENTREGA</div>
+                           <div class="col-xs-12 d-flex justify-content-center">
+                              <img  class="firma_png"  src="img/firma_claudio_timbre.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                              <hr style="width:50%;text-align:left;">
+                              <p id="nombreTecnico" style="margin-bottom: 0px; line-height: 12px;font-weight: 700;"></p>
+                              <p id="rutTecnico" style="margin-bottom: 0px;"></p>
+                           </div>
+                        </div>
+                        <div class="col-xs-6 mb-1  text-center">
+                           <div class="card-header-estado text-center mb-1">RECIBE</div>
+                           <div class="col-xs-12 d-flex justify-content-center">
+                              <img  id="firma_png_recibe"  src="img/firma_jona.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                              <hr style="width:50%;text-align:left">
+                              <p class="nomreRecibe" style="margin-bottom: 0px; line-height: 12px;font-weight: 700;"></p>
+                              <p class="rutRecibe" style="margin-bottom: 0px;"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
-         </div>          
+            <!-- ****************************************** FIN PDF************************************************************* -->
+            <!-- ****************************************** FIN PDF************************************************************* -->
+            <!-- ****************************************** FIN PDF************************************************************* -->
+         </div>
       </div>
       <!-- Bootstrap core JavaScript -->    
       <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>    
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="signature_pad.umd.js"></script>
+      <script src="app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
       <script>
+		var folioInformeTecnico = 1000;
          $(document).ready(function() {
              $(function() {
-                 $('.fechaInspeccion').datepicker({
+                 $('.fechaInspeccionActual').datepicker({
                      dateFormat: 'dd/mm/yy',
                      showButtonPanel: false,
                      changeMonth: false,
@@ -693,6 +1360,74 @@
                  yearSuffix: ''
              };
              $.datepicker.setDefaults($.datepicker.regional['es']);
+			  
+			 			 
+			 $("input:radio").change(function (){
+				$(".jq"+this.name).addClass("ocultar");
+				var radioSeleccionado = $('input:radio[name='+this.name+']:checked').val();
+				
+				$("#"+radioSeleccionado).removeClass("ocultar");			
+				
+			 });
+				
+			
+			$("input:radio").click(function (){
+				var listRadiosUnicos = ['informe15','informe16','informe17','informe18','informe19','informe20','informe21'];
+			
+				if(listRadiosUnicos.includes(this.name)){
+					var radioSeleccionado = $('input:radio[name='+this.name+']:checked').val();
+					if(!$("#"+radioSeleccionado).hasClass('ocultar')){
+						$("#"+radioSeleccionado).addClass("ocultar");
+						$('input:radio[name='+this.name+']').attr('checked', false);
+					}
+				}
+				
+			});
+			
+			$("input:text").blur(function (){	
+			
+				$("."+this.id).text($("#"+this.id).val());			
+				
+			 });
+			 
+			 $(".jqInputFechas").change(function(){
+				$("."+this.id).text($("#"+this.id).val());	
+			 });
+			 			
+			 
+         });
+		
+		
+
+      </script>
+      <script>
+            var options = {
+            margin: 0.5,
+            filename: 'Informe_Tecnico.pdf',
+            pagebreak: {before: '.jqInspeccionInterna' } ,
+            image: {
+               type: 'jpeg',
+               quality: 0.98
+            },
+            html2canvas: {
+               scale: 1
+            },
+            jsPDF: {
+               unit: 'cm',
+               format: 'legal',
+               orientation: 'portrait'
+            }
+         }
+         
+         $('.btn-download').click(function(e){
+			
+			folioInformeTecnico += 1;
+			$("#folioInforme").text(folioInformeTecnico);
+		 
+            e.preventDefault();
+            const element = document.getElementById('pdf');
+            console.log(html2pdf().from(element).set(options).then());
+            html2pdf().from(element).set(options).save();
          });
       </script>
       <script >// Añade el CK Editor
@@ -701,37 +1436,49 @@
              config.uiColor = '#F7B42C';
              config.height = 300;
              config.toolbarCanCollapse = true;
+			 config.line_height = '1px';
          };
-         CKEDITOR.replace('editor1');        
+         var editoor = CKEDITOR.replace('editor1');      
+		 
+		 editoor.on('blur', function(evt){
+            var editorBuffer = editoor.getData();
+            $("#observacionPDF").html(editorBuffer);
+        });
+
       </script>
       <script>
-         $(function() {
-         
+         $(function() {         
              $('#sel-firma').on('change', function() {
                var srcFirma = $(this).val();
-                 $('#firma_png').attr('src', srcFirma);
-             });
-           
+                 $('.firma_png').attr('src', srcFirma);
+				 $('#nombreTecnico').text($('#sel-firma option:selected').text());
+				 $('#rutTecnico').text($('#sel-firma option:selected').attr("data-rut"));
+			 });
+         
            });
       </script>
-       <!-- Modal Firma -->   
-      <div id="myModal" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
-      <div class="modal-dialog" style="max-width: 1350px!important;" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">×</span>
-               </button>
-            </div>
-            <div class="modal-body p-4" id="result">
-               <div class="row">
-                  <div class="col-sm-6 col-lg-3"> Inserte su firma aqui </div>
-               </div>
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Guardar</button>
-            </div>
-         </div>
-      </div>
+     
+   <script>
+        $(function() {
+            $('.proximaMantencion').datepicker( {
+		closeText: 'Aceptar',
+		prevText: '<Ant',
+		nextText: 'Sig>',
+		currentText: 'Hoy',
+		monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+		monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'MM/yy',
+                onClose: function(dateText, inst) { 
+                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+            }
+            });
+        });
+    
+      </script>
+
    </body>
+   
 </html>
