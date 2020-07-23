@@ -14,14 +14,13 @@
       <!-- Custom styles-->
       <link href="css/style.css" rel="stylesheet">
       <!-- calendario-->
-      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-     
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />     
       <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
       <link href="css/style-non-responsive.css" rel="stylesheet">
        <!-- Firma -->
        <link rel="stylesheet" href="css/signature-pad.css">
-       <!-- TExt area-->
-   
+       <!-- TExt area-->     
+
    </head>
    <body >
       
@@ -628,7 +627,7 @@
                   </select>
                </div>
                <div class="col-lg-12 col-md-12 mb-12 d-flex justify-content-center">
-                  <img  class="firma_png"  src="img/firme_aqui.png" alt="firme aqui"  class="img-responsive" >
+                  <img  class="firma_png img-responsive"  src="img/firme_aqui.png" alt="firme aqui"   >
                </div>
             </div>
             <div class="col-md-6 mb-4">
@@ -666,10 +665,16 @@
                   <button type="button" class="save btn btn-success btn-circle btn-lg" data-action="save-png"><i class="glyphicon glyphicon-ok"></i></button>                 
                 </div>  
          </div>
-         </div>
-		 <div class="form-group mb-4 btn-download">
-			<button>Obtener PDF</button>
-		 </div>
+         </div>  </div>
+         <div class="container ">
+            <div class="row">
+               <div class="col-md-12 text-center">
+		 <div class="form-group mb-4 btn-download  ">
+         <div class="center">
+            <button class="ladda-button green zoom-in"><span class="label">Generar PDF</span> <span class="spinner"></span></button>
+      </div>
+       </div>
+       </div></div></div>
       </div>
             <!-- ******************************************PDF************************************************************* -->
             <!-- ******************************************PDF************************************************************* -->
@@ -889,7 +894,8 @@
                                              <img id="informe1OK" class="ocultar jqinforme1" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe1Falla" class="ocultar jqinforme1"src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe1Falla" class="ocultar jqinforme1"src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>
                                              Revisión generales de la carcasa del equipo.
@@ -900,7 +906,8 @@
                                              <img id="informe2OK" class="ocultar jqinforme2" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe2Falla" class="ocultar jqinforme2" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe2Falla" class="ocultar jqinforme2" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>
                                              Verificación de ruedas i/o frenos.
@@ -911,7 +918,8 @@
                                              <img id="informe3OK" class="ocultar jqinforme3" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe3Falla" class="ocultar jqinforme3" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe3Falla" class="ocultar jqinforme3" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>
                                              Revisión estado de cable de alimentación / conectores AC.
@@ -937,7 +945,7 @@
                                  </div>
                               </div>
                               <div class="panel-body">
-                                 <table class="table ">
+                                 <table class="table table-bordered">
                                     <thead>
                                        <tr>
                                           <th>
@@ -957,7 +965,8 @@
                                              <img id="informe4OK" class="ocultar jqinforme4" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe4Falla" class="ocultar jqinforme4" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe4Falla" class="ocultar jqinforme4" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="2">
                                              Verificar la presencia de todos los componentes electrónicos tales como fusibles, interruptores y pasa cables.
@@ -968,7 +977,8 @@
                                              <img id="informe5OK" class="ocultar jqinforme5" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe5Falla" class="ocultar jqinforme5" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe5Falla" class="ocultar jqinforme5" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>
                                              Revisión batería de respaldo
@@ -1019,7 +1029,8 @@
                                              <img id="informe6OK" class="ocultar jqinforme6" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe6Falla" class="ocultar jqinforme6" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe6Falla" class="ocultar jqinforme6" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="5">Verificar panel de control, Indicadores y Perillas.</td>
                                        </tr>
@@ -1028,7 +1039,8 @@
                                              <img id="informe7OK" class="ocultar jqinforme7" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe7Falla" class="ocultar jqinforme7" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe7Falla" class="ocultar jqinforme7" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="5">
                                              Verificar Display.
@@ -1039,7 +1051,8 @@
                                              <img id="informe8OK" class="ocultar jqinforme8" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe8Falla" class="ocultar jqinforme8" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe8Falla" class="ocultar jqinforme8" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="5">
                                              Revisión de filtro i/o Accesorios.
@@ -1050,7 +1063,8 @@
                                              <img id="informe9OK" class="ocultar jqinforme9" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe9Falla" class="ocultar jqinforme9" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe9Falla" class="ocultar jqinforme9" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>Revisión de parametros con analizador.</td>
                                           <td>
@@ -1083,7 +1097,8 @@
                                              <img id="informe10OK" class="ocultar jqinforme10" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe10Falla" class="ocultar jqinforme10" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe10Falla" class="ocultar jqinforme10" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="5"> Verificacion de pistones, resortes a gas.</td>
                                        </tr>
@@ -1092,7 +1107,8 @@
                                              <img id="informe11OK" class="ocultar jqinforme11" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe11Falla" class="ocultar jqinforme11" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe11Falla" class="ocultar jqinforme11" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td>
                                              Revisión con analizador.
@@ -1108,7 +1124,8 @@
                                              <img id="informe12OK" class="ocultar jqinforme12" src="img/Check_1063906.png" width="20">
                                           </td>
                                           <td class="panel-table-whith ">
-                                             <img id="informe12Falla" class="ocultar jqinforme12" src="img/Close_1031533.png" width="20">
+											<span>N/A</span>
+                                            <img id="informe12Falla" class="ocultar jqinforme12" src="img/Close_1031533.png" width="20">
                                           </td>
                                           <td colspan="5">
                                              Sistema Operativo.
@@ -1293,7 +1310,7 @@
                         <div class="col-xs-6 mb-1" >
                            <div class="card-header-estado text-center mb-1">ENTREGA</div>
                            <div class="col-xs-12 d-flex justify-content-center">
-                              <img  class="firma_png"  src="img/firma_claudio_timbre.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                              <img  class="firma_png "  src="img/firma_claudio_timbre.png" alt="firme aqui"  class="img-fluid"  style="width: 200px; height: 80px;">
                               <hr style="width:50%;text-align:left;">
                               <p id="nombreTecnico" style="margin-bottom: 0px; line-height: 12px;font-weight: 700;"></p>
                               <p id="rutTecnico" style="margin-bottom: 0px;"></p>
@@ -1302,7 +1319,7 @@
                         <div class="col-xs-6 mb-1  text-center">
                            <div class="card-header-estado text-center mb-1">RECIBE</div>
                            <div class="col-xs-12 d-flex justify-content-center">
-                              <img  id="firma_png_recibe"  src="img/firma_jona.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;">
+                              <img  id="firma_png_recibe"  src="img/firma_Blanca.png" alt="firme aqui"  class="img-fluid"  style="width: 200px;height: 80px;">
                               <hr style="width:50%;text-align:left">
                               <p class="nomreRecibe" style="margin-bottom: 0px; line-height: 12px;font-weight: 700;"></p>
                               <p class="rutRecibe" style="margin-bottom: 0px;"></p>
@@ -1366,7 +1383,12 @@
 				$(".jq"+this.name).addClass("ocultar");
 				var radioSeleccionado = $('input:radio[name='+this.name+']:checked').val();
 				
-				$("#"+radioSeleccionado).removeClass("ocultar");			
+				if(radioSeleccionado.includes("Falla")){
+					$("#"+radioSeleccionado).parent().find("span").addClass("ocultar");
+				}
+				$("#"+radioSeleccionado).removeClass("ocultar");
+				
+							
 				
 			 });
 				
@@ -1414,7 +1436,7 @@
             },
             jsPDF: {
                unit: 'cm',
-               format: 'legal',
+               format: [21,36],
                orientation: 'portrait'
             }
          }
@@ -1478,7 +1500,66 @@
         });
     
       </script>
+<script>
+  var buttons = document.querySelectorAll( '.ladda-button' );
+Array.prototype.slice.call( buttons ).forEach( function( button ) {
+	var resetTimeout;
+	button.addEventListener( 'click', function() {		
+		if( typeof button.getAttribute( 'data-loading' ) === 'string' ) {
+			button.removeAttribute( 'data-loading' );
+		}
+		else {
+			button.setAttribute( 'data-loading', '' );
+		}
 
+		clearTimeout( resetTimeout );
+		resetTimeout = setTimeout( function() {
+			button.removeAttribute( 'data-loading' );			
+		}, 2000 );
+	}, false );
+} );
+'use strict';
+var app = angular.module('ladda', []);
+app.directive('laddaButton', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attributes) {            
+            var l = Ladda.create(element[0]);            
+            scope.$watch(attributes.laddaButton, function (value) {                
+                if (typeof value === "number") {
+                    if (!l.isLoading()) {
+                        l.start();
+                    }
+                    l.setProgress(value / 100);
+                } else if (value === true) {                    
+                    l.start();
+                } else if (value === false) {                   
+                    l.stop();
+                }
+            });
+        }
+    };
+});
+app.controller('laddaDemoCtrl', function ($scope, $interval, $timeout) {   
+    $scope.showLoading = function () {       
+        $scope.laddaLoading = true;
+        $timeout(function () {           
+            $scope.laddaLoading = false;
+        }, 3000);
+    };   
+   
+    $scope.loadingWithProgress = function () {       
+        $scope.laddaLoadingBar = 0;       
+        var interval = $interval(function () {           
+            $scope.laddaLoadingBar++;
+            if ($scope.laddaLoadingBar >= 100) {               
+                $interval.cancel(interval);               
+                $scope.laddaLoadingBar = false;
+            }
+        }, 30);
+    };
+});
+</script>
    </body>
    
 </html>
